@@ -14,3 +14,17 @@ s, n = input(), int(input())
 for i in zip(*[iter(s)] * n):
     d = dict()
     print(''.join([ d.setdefault(c, c) for c in i if c not in d ]))
+   
+
+#Another method in simple language for beginners
+n = int((len(string))/k)
+l = [ ]
+len_l = 0
+for i in string:
+   len_l = len_l + 1
+   if i not in l:
+      l.append(i)
+   if len_l == k:
+      print (''.join(l))
+      len_l = 0
+      l = [ ]
